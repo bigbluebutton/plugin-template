@@ -1,0 +1,29 @@
+{
+  "requiredSdkVersion": "~0.0.59",
+  "name": "<plugin-name>",
+  "javascriptEntrypointUrl": "<plugin-name>.js",
+  "localesBaseUrl": "https://cdn.dominio.com/pluginabc/",
+  "eventPersistence": {
+      "isEnabled": true,
+      "maximumPayloadSizeInBytes": 1024,
+      "rateLimiting": {
+          "messagesAllowedPerSecond": 10,
+          "messagesAllowedPerMinute": 20
+      }
+  },
+  "dataChannels": [
+      {
+          "name": "<data-channel-name>",
+          "pushPermission": ["moderator"],
+          "replaceOrDeletePermission": ["creator", "moderator"]
+      }
+  ],
+  "remoteDataSources": [
+      {
+          "name": "<remote-data-source-name>",
+          "url": "${meta_remote-data-uri}",
+          "fetchMode": "onMeetingCreate",
+          "permissions": ["moderator"]
+      }
+  ]
+}
