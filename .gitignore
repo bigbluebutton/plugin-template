@@ -1,5 +1,6 @@
 node_modules
 dist
+dist-tsc
 debian/.debhelper/
 debian/debhelper-build-stamp
 debian/files
