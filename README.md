@@ -4,12 +4,26 @@
 
 A brief description of the plugin including a screenshot and/or a short video.
 
+### Plugin Versioning
+
+This repository contains the source code of a BigBlueButton plugin.
+
+Please be aware that we have a separate branch to match each version of the SDK. This ensures that everything merged into a branch is compatible with the corresponding version of the BigBlueButton core. As of now, here's the correspondence between the branches, SDK versions, and BigBlueButton core versions:
+
+| Repository Branch | Plugin-SDK Version | BigBlueButton Core Version |
+|------------------|--------------------|----------------------------|
+| v0.0.x           | v0.0.x             | v3.0.x                     |
+| v0.1.x           | v0.1.x             | v3.1.x                     |
+
+Note that this branch (`main`) does not contain any code, as it is used only for basic documentation. For more information about the plugin API features, see the documentation (`readme` files) within the specific branch you are interested in. We separate the branches because, going forward, `v0.1.x` is becoming more and more different from `v0.0.x`.
+
 ## Building the Plugin
 
 To build the plugin for production use, follow these steps:
 
 ```bash
 cd $HOME/src/plugin-template
+# navigate to the correct git branch
 npm ci
 npm run build-bundle
 ```
